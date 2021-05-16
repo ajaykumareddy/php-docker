@@ -1,6 +1,9 @@
 # php-docker
 
-docker build -t ws_1_php
+docker pull softsuavear/ws_1:1.0
 
 docker-compose -f docker-compose.yaml up
+
+
+
 
