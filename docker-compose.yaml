@@ -13,6 +13,6 @@ services:
         environment: 
             - PMA_HOST=mysqldb
     ws_1_php:
-        image: ws_1_php
+        image: ws_1_php:1.0
         ports: 
-            - 8081:8081
+            - 8000:8000
