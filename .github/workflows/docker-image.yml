@@ -1,0 +1,16 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ main ]
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image and Push to Registry
+      run: |
+        docker build . --file Dockerfile --tag softsuavear/ws_1:1.0
+        docker login -u softsuavear -p softsuave#123
+        docker push softsuavear/ws_1:1.0
